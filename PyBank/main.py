@@ -7,3 +7,8 @@ with open(csvpath, "r") as csvfile:
     #also find the lowest value on the revenue column
     #what was the biggest growth in a month?
     #what the biggest loss in a month?
+    #what average profit or loss?
+    csvreader = csv.reader(csvfile)
+    print(csvreader) #I want it to read me the highest value
+    for data in csvreader:
+        print(data[1])
