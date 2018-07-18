@@ -14,3 +14,6 @@ with open(csvpath, "r") as csvfile:
         if tally[0] != "Voter ID":
             votes.append(str(tally[0]))
 print("number of voters is", len(votes))
+#I want to see what candidates got votes
+#I want to see who got how many votes
+#I want to total the number of votes each candidate got
