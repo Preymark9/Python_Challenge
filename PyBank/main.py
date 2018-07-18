@@ -9,6 +9,20 @@ with open(csvpath, "r") as csvfile:
     #what the biggest loss in a month?
     #what average profit or loss?
     csvreader = csv.reader(csvfile)
-    print(csvreader) #I want it to read me the highest value
+    print(csvreader) #I want it to read me the highest value\
+    #print as list revenue = [csvreader(1)]
+    revenue = []
     for data in csvreader:
-        print(data[1])
+        #input max of a list in the revenue
+        #revenue.append(data[1])
+        #print(data[1])
+        #print(max(revenue))
+        #print(revenue)
+        if data[1] != "Revenue": 
+            revenue.append(int(data[1]))
+        #Else if data == int: 
+            #print("the max is", max(revenue))
+print(revenue)
+print("the number of months is", len(revenue))
+print("the max  is ", max(revenue))
+print("the mix is ", min(revenue))

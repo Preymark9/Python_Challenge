@@ -7,3 +7,10 @@ with open(csvpath, "r") as csvfile:
     #who got the most votes
     #who got the least votes
     #tally the votes for everyone
+    csvreader = csv.reader(csvfile)
+    print(csvreader)
+    votes = []
+    for tally in csvreader:
+        if tally[0] != "Voter ID":
+            votes.append(str(tally[0]))
+print("number of voters is", len(votes))
